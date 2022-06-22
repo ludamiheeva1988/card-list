@@ -26,7 +26,7 @@ export default class CardsList {
      };
      renderCards () {
 
-         const cards = this.data.map(item => {
+         const cards = this.data.map(item => { 
              const card = new Card(item);
 
              return card.element;

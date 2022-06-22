@@ -26,7 +26,7 @@ export default class Card {
               </div>
             </div>
             `;
-        return result;
+        return result; 
      }
      update (data = {}) {
       this.state = data;
