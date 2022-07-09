@@ -10,8 +10,8 @@ export default class CardsList {
     getTemplate () {
         return `
         <div>
-            <div class="products-list" data-element="body">
-
+            <div class="products-list" data-element="section">
+                
             </div>
         </div>
         `;
@@ -26,15 +26,15 @@ export default class CardsList {
      };
      renderCards () {
 
-         const cards = this.data.map(item => { 
+         const cards = this.data.map(item => {
              const card = new Card(item);
 
              return card.element;
          });
 
-          const body = this.element.querySelector('[data-element="body"]');
-          body.innerHTML = '';
-          body.append(...cards);
+          const section = this.element.querySelector('[data-element="section"]');
+          section.innerHTML = '';
+          section.append(...cards);
     
      };
      update (data = []) {
